@@ -1,0 +1,10 @@
+PODS:
+  - UberKit (0.2)
+
+DEPENDENCIES:
+  - UberKit
+
+SPEC CHECKSUMS:
+  UberKit: 3c4767f8c2b317be450c3de48acbe6b632306004
+
+COCOAPODS: 0.38.1

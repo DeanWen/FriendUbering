@@ -1,0 +1,842 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03655F74ABBFA09F6C4E5F66B0A0EAD9 /* NXOAuth2Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = B232D4DCCC090F939340795E64D84B6D /* NXOAuth2Connection.m */; };
+		0368AF24F67E798411DCBED31EB5529C /* NXOAuth2FileStreamWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C8053509CD4B1DA48685536EC32EAD24 /* NXOAuth2FileStreamWrapper.m */; };
+		07B74FEAEFB43EE7C1EC10ED2B0B44BC /* UberActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 751B81458557B21585AB5DC2B51402AD /* UberActivity.m */; };
+		0FBB3369C5B90799510C61CD2A751E9E /* UberPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA59349BC4B5D419281735B006EB8B /* UberPromotion.m */; };
+		1545BE11B4F707B17799784E3C1995B0 /* NSString+NXOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 1948FB3E2147DA8DFDC3A44ECE9CB130 /* NSString+NXOAuth2.h */; };
+		253029F60A1811F6FBF8970C5A0E60DD /* NXOAuth2FileStreamWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEB8196AFAAB81FB0CF3067581D8BF8 /* NXOAuth2FileStreamWrapper.h */; };
+		261E9D570E3E75F5E47C60AA78F2C940 /* NSData+NXOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = A8AEF0B80209155A78708426C792BB7F /* NSData+NXOAuth2.h */; };
+		298B708F95476EA2EE60AFADDC6717C5 /* UberTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 34554F47FD6BD9E7A5E23F6A27CF80DA /* UberTime.h */; };
+		2AE68C56675380E44F29A89F1D5E67D7 /* UberActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = F274FEB8C076B745900612E26DE224A4 /* UberActivity.h */; };
+		2F97BC4D1B6486AB00A5F231 /* UberReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97BC4C1B6486AB00A5F231 /* UberReceipt.m */; };
+		37CF3F03FE11F8DE22A9D94F80227706 /* UberProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = CA90AA28E540DC3657B90BF67EDE2688 /* UberProduct.m */; };
+		41705556D75A19D66D1B29900BE7D236 /* NXOAuth2ClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED4DC47DE7F08A5669944C447AA1F5CA /* NXOAuth2ClientDelegate.h */; };
+		47785F3EA1F9CA61B5101A768D99DA2F /* Pods-WeRideTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C806B36982D1F1E73013DC94842A4FB /* Pods-WeRideTests-dummy.m */; };
+		4D805560B11B598D4117703E55615248 /* NSData+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B4E15F785A7CD6384E64D87259763 /* NSData+NXOAuth2.m */; };
+		4F151196709088923AF90A37F8AF6227 /* NXOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D858F57BE0E172DE92CCB139E67BEC6 /* NXOAuth2.h */; };
+		508A36B256AD0D16C36F7F1E9751856D /* UberKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF17C6CBC14A54E42B0F6A879CF1D9B /* UberKit.m */; };
+		5460A3F5AEC2CC07BD2AC32BAE8D16E9 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF3D5C7AE9F6232B70BDDB07EFB8447 /* Pods-dummy.m */; };
+		61A6BA6779C390508681E45E4251C3A9 /* UberProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = A6858D3CF08D30FD73F6ED9A6BC750F8 /* UberProfile.h */; };
+		61F5F69F668A5013FD61B43854C53387 /* NXOAuth2Request.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DEAD41656F3AE90DE1C18B4F418F5C /* NXOAuth2Request.m */; };
+		640EAA0476D827844D4C688C09DCC677 /* NXOAuth2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F288AA9319B9A7A53E78D661B7D545 /* NXOAuth2Constants.m */; };
+		6758816B692D06D3EB089F584353FBD3 /* NXOAuth2PostBodyPart.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4AD4F29008708127AF4A465611F2DC /* NXOAuth2PostBodyPart.h */; };
+		73EAC170BBDC3A9F8819525DD6DC402D /* UberKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F2CC80F85C61096441D660463AE998 /* UberKit.h */; };
+		75BBB92D0F7E46DDDAB09632C5C7E152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D7569BBF2A8E9A0A0E4E1394A6550A /* Foundation.framework */; };
+		770F924C4C33B1C0AC280421BB340267 /* NSURL+NXOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 65575531D44BBB8F74DBF44190F45E6D /* NSURL+NXOAuth2.h */; };
+		8345513A57C9E22A71EE239711F068ED /* NXOAuth2Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = E87DC429936A197CA832E3A1A065FD27 /* NXOAuth2Connection.h */; };
+		857B14F07784656505C3869C311F24C3 /* UberKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DECB1F662E6E2C515197ADC2127F799 /* UberKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87B705B221D5D6B9048571918A86F5CF /* UberPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = AB83D5EBB303C3A2767A2657E0F110AC /* UberPrice.m */; };
+		88AAEF6198576D81D0026188A80F2F34 /* UberKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C501F44888686760CC54B1C7AC91A6 /* UberKit-dummy.m */; };
+		895F70C6E8AF30A104CC11F92374BE07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D7569BBF2A8E9A0A0E4E1394A6550A /* Foundation.framework */; };
+		89CF9EBB685D36119CDD76D17D3D3887 /* UberPrice.h in Headers */ = {isa = PBXBuildFile; fileRef = D23ACA455061DD6696955D1261906047 /* UberPrice.h */; };
+		8EF3928C4056E091C38468C7F763463D /* NXOAuth2Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C948AA32575231726C58BDB92C4B0AA /* NXOAuth2Client.m */; };
+		9A2C956BE014623616D8845D4FA774F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D7569BBF2A8E9A0A0E4E1394A6550A /* Foundation.framework */; };
+		A35D36CA46E4C08D8A27A337C0425EE7 /* UberPromotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 657A5208BC30F9D475414757CB6031CC /* UberPromotion.h */; };
+		A6E704A4599F562B0C58149D52AE58CC /* UberProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E9DFF3A5B01C586D709E642A2FA35E /* UberProfile.m */; };
+		A7171C61B63E9479EAE4F6C23E58FBF5 /* NXOAuth2Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A494530B88E64F4CED1BF7D00735AD2 /* NXOAuth2Constants.h */; };
+		AA3294BB1CBDB9E4301F06ADE6D4E159 /* NXOAuth2AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 4051D1AFB3BB3474546A5D65CF5F06C0 /* NXOAuth2AccessToken.m */; };
+		AA7A7AE3AE789ABCE0F612B59FE853F0 /* NXOAuth2TrustDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 19007D8679B0B2E028A5BA4B0BF395B9 /* NXOAuth2TrustDelegate.h */; };
+		ABA905AC3C83115F2720321D2DE008E4 /* NXOAuth2Client.h in Headers */ = {isa = PBXBuildFile; fileRef = E0D41507CDA7AC31950912BA07451D26 /* NXOAuth2Client.h */; };
+		AFE5CEAE74B908E6C4625F8E56AD80B3 /* NXOAuth2PostBodyPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 444E7DFA301739F005C26EEC09DC0D12 /* NXOAuth2PostBodyPart.m */; };
+		B4C307B0A9A501E2DE339A862561C31D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D7569BBF2A8E9A0A0E4E1394A6550A /* Foundation.framework */; };
+		B93BE9DEB2DF6306F9A940B2B51FD794 /* NXOAuth2Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6F78D88B84F441053B7BEEB8FEA084 /* NXOAuth2Account.h */; };
+		B98A17B924C3866BD6D13580C8BA009D /* NSURL+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = D93177725DA0890CAAD491D0B2614096 /* NSURL+NXOAuth2.m */; };
+		BA5D0ECC11FF26BD9C6270F8557B1F66 /* UberProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B2F3D49DC0C44408F524491F1074064 /* UberProduct.h */; };
+		BB88082BFDC0C76E21087282426CF22A /* NXOAuth2AccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A268B43001DF43E867186AACBF59C6 /* NXOAuth2AccountStore.m */; };
+		C760EA6E10BBC31FCB21F6217A4598D0 /* NXOAuth2PostBodyStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1EFE22AC505D6907FC41738AC49C33 /* NXOAuth2PostBodyStream.m */; };
+		C7C7E8867122145F8C5125ABF790DF4F /* NXOAuth2AccessToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 294A9C8D2EE828E947628979A1018CA8 /* NXOAuth2AccessToken.h */; };
+		CB1EF1EB5B0C03EA7CE1D0F309984560 /* NXOAuth2Account.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1B02488139D66E0B4483C4C081086 /* NXOAuth2Account.m */; };
+		D0B57D8955171F5069178B305F9729B3 /* NSString+NXOAuth2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D72BEE521F20AA545D75573F584DF25 /* NSString+NXOAuth2.m */; };
+		D5331728F4BA592ABE631BF0EE7254E4 /* Pods-WeRide-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5861694D9DB0DED6128E196F57C28526 /* Pods-WeRide-dummy.m */; };
+		D55F41848D74D828AA3B910EE130F510 /* UberTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBDA8A9A8AA2A3598961B69DDBAB4DD /* UberTime.m */; };
+		D852CDBBB6706C3669A7197CC2EEFA38 /* NXOAuth2PostBodyStream.h in Headers */ = {isa = PBXBuildFile; fileRef = B79B90C395D50F92BE5236F97D9E3206 /* NXOAuth2PostBodyStream.h */; };
+		D976119E37943778EA009C219F37D365 /* NXOAuth2Request.h in Headers */ = {isa = PBXBuildFile; fileRef = B21EC5AC9278375C762A80430CDD18DD /* NXOAuth2Request.h */; };
+		DA416924833776CCF5AAFDC547ABAB51 /* NXOAuth2ConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E7AE7F840517382C8FEC1ECE2FD9E5CC /* NXOAuth2ConnectionDelegate.h */; };
+		E2F1C5AE1EEBFFDDAF2D6A8299CC2664 /* NXOAuth2Account+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 97E139CBE8D6931E1FF707E821D96957 /* NXOAuth2Account+Private.h */; };
+		E4D24758A3A0D4DEC56406A292E33955 /* NXOAuth2AccountStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 907434EC7234D6912E851FB954A14949 /* NXOAuth2AccountStore.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87A744B15A32CD41548FF57E434C3C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CD6BF2D6377B3A52FFCF3F0A67D419F;
+			remoteInfo = UberKit;
+		};
+		90B7892FB57C4A337F1A8339A44C0073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CD6BF2D6377B3A52FFCF3F0A67D419F;
+			remoteInfo = UberKit;
+		};
+		C071EBAFE6524EBC3709D5DDE7C84E0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CD6BF2D6377B3A52FFCF3F0A67D419F;
+			remoteInfo = UberKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0110386392D15E4BAADD78D179A09A72 /* Pods-WeRideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeRideTests.debug.xcconfig"; sourceTree = "<group>"; };
+		08C220A765D64DE605459390B83D29B7 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		0A838590A0D7F479DD6483FD26987267 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		0E6633BA0AA9D969B635386AAC8CFF35 /* UberKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = UberKit.modulemap; sourceTree = "<group>"; };
+		19007D8679B0B2E028A5BA4B0BF395B9 /* NXOAuth2TrustDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2TrustDelegate.h; path = UberKit/OAuth2Client/NXOAuth2TrustDelegate.h; sourceTree = "<group>"; };
+		1948FB3E2147DA8DFDC3A44ECE9CB130 /* NSString+NXOAuth2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+NXOAuth2.h"; path = "UberKit/OAuth2Client/NSString+NXOAuth2.h"; sourceTree = "<group>"; };
+		1C948AA32575231726C58BDB92C4B0AA /* NXOAuth2Client.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2Client.m; path = UberKit/OAuth2Client/NXOAuth2Client.m; sourceTree = "<group>"; };
+		23F2CC80F85C61096441D660463AE998 /* UberKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberKit.h; path = UberKit/UberKit.h; sourceTree = "<group>"; };
+		294A9C8D2EE828E947628979A1018CA8 /* NXOAuth2AccessToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2AccessToken.h; path = UberKit/OAuth2Client/NXOAuth2AccessToken.h; sourceTree = "<group>"; };
+		29EBE6C69E55DA1AEC15A732C648C9AB /* libUberKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUberKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D6F78D88B84F441053B7BEEB8FEA084 /* NXOAuth2Account.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2Account.h; path = UberKit/OAuth2Client/NXOAuth2Account.h; sourceTree = "<group>"; };
+		2D858F57BE0E172DE92CCB139E67BEC6 /* NXOAuth2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2.h; path = UberKit/OAuth2Client/NXOAuth2.h; sourceTree = "<group>"; };
+		2F97BC4B1B6486AB00A5F231 /* UberReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UberReceipt.h; sourceTree = "<group>"; };
+		2F97BC4C1B6486AB00A5F231 /* UberReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UberReceipt.m; sourceTree = "<group>"; };
+		34554F47FD6BD9E7A5E23F6A27CF80DA /* UberTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberTime.h; path = UberKit/Model/UberTime.h; sourceTree = "<group>"; };
+		36A268B43001DF43E867186AACBF59C6 /* NXOAuth2AccountStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2AccountStore.m; path = UberKit/OAuth2Client/NXOAuth2AccountStore.m; sourceTree = "<group>"; };
+		3A0B4E15F785A7CD6384E64D87259763 /* NSData+NXOAuth2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+NXOAuth2.m"; path = "UberKit/OAuth2Client/NSData+NXOAuth2.m"; sourceTree = "<group>"; };
+		3A4AD4F29008708127AF4A465611F2DC /* NXOAuth2PostBodyPart.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2PostBodyPart.h; path = UberKit/OAuth2Client/NXOAuth2PostBodyPart.h; sourceTree = "<group>"; };
+		3CBDA8A9A8AA2A3598961B69DDBAB4DD /* UberTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UberTime.m; path = UberKit/Model/UberTime.m; sourceTree = "<group>"; };
+		3DECB1F662E6E2C515197ADC2127F799 /* UberKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UberKit-umbrella.h"; sourceTree = "<group>"; };
+		4051D1AFB3BB3474546A5D65CF5F06C0 /* NXOAuth2AccessToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2AccessToken.m; path = UberKit/OAuth2Client/NXOAuth2AccessToken.m; sourceTree = "<group>"; };
+		444E7DFA301739F005C26EEC09DC0D12 /* NXOAuth2PostBodyPart.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2PostBodyPart.m; path = UberKit/OAuth2Client/NXOAuth2PostBodyPart.m; sourceTree = "<group>"; };
+		4802A7C43EADC2F6AC8C378397B4E2F1 /* libPods-WeRideTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeRideTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D7569BBF2A8E9A0A0E4E1394A6550A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5861694D9DB0DED6128E196F57C28526 /* Pods-WeRide-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeRide-dummy.m"; sourceTree = "<group>"; };
+		5B2F3D49DC0C44408F524491F1074064 /* UberProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberProduct.h; path = UberKit/Model/UberProduct.h; sourceTree = "<group>"; };
+		5CAAA88A051E750B8689A35055882CCB /* Pods-WeRide-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeRide-acknowledgements.plist"; sourceTree = "<group>"; };
+		5E1EFE22AC505D6907FC41738AC49C33 /* NXOAuth2PostBodyStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2PostBodyStream.m; path = UberKit/OAuth2Client/NXOAuth2PostBodyStream.m; sourceTree = "<group>"; };
+		5FCA59349BC4B5D419281735B006EB8B /* UberPromotion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UberPromotion.m; path = UberKit/Model/UberPromotion.m; sourceTree = "<group>"; };
+		5FEB8196AFAAB81FB0CF3067581D8BF8 /* NXOAuth2FileStreamWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2FileStreamWrapper.h; path = UberKit/OAuth2Client/NXOAuth2FileStreamWrapper.h; sourceTree = "<group>"; };
+		65575531D44BBB8F74DBF44190F45E6D /* NSURL+NXOAuth2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+NXOAuth2.h"; path = "UberKit/OAuth2Client/NSURL+NXOAuth2.h"; sourceTree = "<group>"; };
+		657A5208BC30F9D475414757CB6031CC /* UberPromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberPromotion.h; path = UberKit/Model/UberPromotion.h; sourceTree = "<group>"; };
+		6CF3D5C7AE9F6232B70BDDB07EFB8447 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		751B81458557B21585AB5DC2B51402AD /* UberActivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UberActivity.m; path = UberKit/Model/UberActivity.m; sourceTree = "<group>"; };
+		79B16E4ADD30B76B24243B8D53F6AFCB /* Pods-WeRideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeRideTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BF17C6CBC14A54E42B0F6A879CF1D9B /* UberKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UberKit.m; path = UberKit/UberKit.m; sourceTree = "<group>"; };
+		7D72BEE521F20AA545D75573F584DF25 /* NSString+NXOAuth2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+NXOAuth2.m"; path = "UberKit/OAuth2Client/NSString+NXOAuth2.m"; sourceTree = "<group>"; };
+		8980AF89E61F2D535D8F76E7D56D2515 /* Pods-WeRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeRide.release.xcconfig"; sourceTree = "<group>"; };
+		8AFB9B924FE1122554EAF4A684DEF7D0 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8C806B36982D1F1E73013DC94842A4FB /* Pods-WeRideTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WeRideTests-dummy.m"; sourceTree = "<group>"; };
+		907434EC7234D6912E851FB954A14949 /* NXOAuth2AccountStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2AccountStore.h; path = UberKit/OAuth2Client/NXOAuth2AccountStore.h; sourceTree = "<group>"; };
+		97CAE8508D2072CABF5DAA354335BBDE /* UberKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UberKit.xcconfig; sourceTree = "<group>"; };
+		97E139CBE8D6931E1FF707E821D96957 /* NXOAuth2Account+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NXOAuth2Account+Private.h"; path = "UberKit/OAuth2Client/NXOAuth2Account+Private.h"; sourceTree = "<group>"; };
+		9A494530B88E64F4CED1BF7D00735AD2 /* NXOAuth2Constants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2Constants.h; path = UberKit/OAuth2Client/NXOAuth2Constants.h; sourceTree = "<group>"; };
+		9CF4AB89C2A21412E931462F0E27F93D /* Pods-WeRide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WeRide.debug.xcconfig"; sourceTree = "<group>"; };
+		A4D1B02488139D66E0B4483C4C081086 /* NXOAuth2Account.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2Account.m; path = UberKit/OAuth2Client/NXOAuth2Account.m; sourceTree = "<group>"; };
+		A6858D3CF08D30FD73F6ED9A6BC750F8 /* UberProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberProfile.h; path = UberKit/Model/UberProfile.h; sourceTree = "<group>"; };
+		A8AEF0B80209155A78708426C792BB7F /* NSData+NXOAuth2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+NXOAuth2.h"; path = "UberKit/OAuth2Client/NSData+NXOAuth2.h"; sourceTree = "<group>"; };
+		AB83D5EBB303C3A2767A2657E0F110AC /* UberPrice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UberPrice.m; path = UberKit/Model/UberPrice.m; sourceTree = "<group>"; };
+		ADBF3FE3CE2769A8DE2859288F97259A /* Pods-WeRideTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeRideTests-resources.sh"; sourceTree = "<group>"; };
+		B21EC5AC9278375C762A80430CDD18DD /* NXOAuth2Request.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2Request.h; path = UberKit/OAuth2Client/NXOAuth2Request.h; sourceTree = "<group>"; };
+		B232D4DCCC090F939340795E64D84B6D /* NXOAuth2Connection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2Connection.m; path = UberKit/OAuth2Client/NXOAuth2Connection.m; sourceTree = "<group>"; };
+		B2E9DFF3A5B01C586D709E642A2FA35E /* UberProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UberProfile.m; path = UberKit/Model/UberProfile.m; sourceTree = "<group>"; };
+		B79B90C395D50F92BE5236F97D9E3206 /* NXOAuth2PostBodyStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2PostBodyStream.h; path = UberKit/OAuth2Client/NXOAuth2PostBodyStream.h; sourceTree = "<group>"; };
+		B7C501F44888686760CC54B1C7AC91A6 /* UberKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UberKit-dummy.m"; sourceTree = "<group>"; };
+		B98D8D5AC82A60637572872C51D60F45 /* Pods-WeRideTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeRideTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B9DDD4B982F2DADFB709DDD7AA4A4182 /* Pods-WeRide-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WeRide-resources.sh"; sourceTree = "<group>"; };
+		B9F288AA9319B9A7A53E78D661B7D545 /* NXOAuth2Constants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2Constants.m; path = UberKit/OAuth2Client/NXOAuth2Constants.m; sourceTree = "<group>"; };
+		BDE862405BE8F938CDC2ABC1AB379CC7 /* Pods-WeRideTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WeRideTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C46FEFE7CE67B9CF947B76D066D9B9C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		C4F62FB5F0ED969B9B5133B55E04143F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5DFB82014E54221DF4FCA4E2AC71AF6 /* UberKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UberKit-prefix.pch"; sourceTree = "<group>"; };
+		C8053509CD4B1DA48685536EC32EAD24 /* NXOAuth2FileStreamWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2FileStreamWrapper.m; path = UberKit/OAuth2Client/NXOAuth2FileStreamWrapper.m; sourceTree = "<group>"; };
+		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CA90AA28E540DC3657B90BF67EDE2688 /* UberProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UberProduct.m; path = UberKit/Model/UberProduct.m; sourceTree = "<group>"; };
+		D23ACA455061DD6696955D1261906047 /* UberPrice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberPrice.h; path = UberKit/Model/UberPrice.h; sourceTree = "<group>"; };
+		D93177725DA0890CAAD491D0B2614096 /* NSURL+NXOAuth2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+NXOAuth2.m"; path = "UberKit/OAuth2Client/NSURL+NXOAuth2.m"; sourceTree = "<group>"; };
+		E0D41507CDA7AC31950912BA07451D26 /* NXOAuth2Client.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2Client.h; path = UberKit/OAuth2Client/NXOAuth2Client.h; sourceTree = "<group>"; };
+		E2DEAD41656F3AE90DE1C18B4F418F5C /* NXOAuth2Request.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2Request.m; path = UberKit/OAuth2Client/NXOAuth2Request.m; sourceTree = "<group>"; };
+		E2EC6995761C3F091CEF805F6AB6A137 /* UberKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UberKit-Private.xcconfig"; sourceTree = "<group>"; };
+		E7AE7F840517382C8FEC1ECE2FD9E5CC /* NXOAuth2ConnectionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2ConnectionDelegate.h; path = UberKit/OAuth2Client/NXOAuth2ConnectionDelegate.h; sourceTree = "<group>"; };
+		E87DC429936A197CA832E3A1A065FD27 /* NXOAuth2Connection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2Connection.h; path = UberKit/OAuth2Client/NXOAuth2Connection.h; sourceTree = "<group>"; };
+		ED4DC47DE7F08A5669944C447AA1F5CA /* NXOAuth2ClientDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2ClientDelegate.h; path = UberKit/OAuth2Client/NXOAuth2ClientDelegate.h; sourceTree = "<group>"; };
+		EF9986F74020A93A13126B955E9F9D47 /* libPods-WeRide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeRide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AEA3245179DCB071E94263CE0528F0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		F274FEB8C076B745900612E26DE224A4 /* UberActivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberActivity.h; path = UberKit/Model/UberActivity.h; sourceTree = "<group>"; };
+		F4EFDF7693E7B8513368F48A26CFF4B0 /* Pods-WeRide-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WeRide-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		581DD3717C0BB7BFF0BC1F01A43F91AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75BBB92D0F7E46DDDAB09632C5C7E152 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE82D0C80721021E68D89A1A29A08EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C956BE014623616D8845D4FA774F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E11DDDD2512CD8EDD8364F0AA583F00B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				895F70C6E8AF30A104CC11F92374BE07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1F896121D193F4F2597EDC3F3518AA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C307B0A9A501E2DE339A862561C31D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F17134087DD65FFF94F981825CFA9CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AFB9B924FE1122554EAF4A684DEF7D0 /* Pods-acknowledgements.markdown */,
+				08C220A765D64DE605459390B83D29B7 /* Pods-acknowledgements.plist */,
+				6CF3D5C7AE9F6232B70BDDB07EFB8447 /* Pods-dummy.m */,
+				0A838590A0D7F479DD6483FD26987267 /* Pods-resources.sh */,
+				F0AEA3245179DCB071E94263CE0528F0 /* Pods.debug.xcconfig */,
+				C46FEFE7CE67B9CF947B76D066D9B9C0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		33A2DFA941E11F4B5B7E005D2FE0A3E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				57D7569BBF2A8E9A0A0E4E1394A6550A /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		447897FA6B8E4E6C6FEFAB2F681BE246 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F17134087DD65FFF94F981825CFA9CB /* Pods */,
+				FA81D483F143A18121CB55D9233F5545 /* Pods-WeRide */,
+				C4363C9A15DF4DA7A694570B86618ED0 /* Pods-WeRideTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33A2DFA941E11F4B5B7E005D2FE0A3E5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
+				5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */,
+				FCC6F965540745142F6675EF7C9E0E2D /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				447897FA6B8E4E6C6FEFAB2F681BE246 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9C8F3ED31203EFA8746B83A1CDCFC85B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E6633BA0AA9D969B635386AAC8CFF35 /* UberKit.modulemap */,
+				97CAE8508D2072CABF5DAA354335BBDE /* UberKit.xcconfig */,
+				E2EC6995761C3F091CEF805F6AB6A137 /* UberKit-Private.xcconfig */,
+				B7C501F44888686760CC54B1C7AC91A6 /* UberKit-dummy.m */,
+				C5DFB82014E54221DF4FCA4E2AC71AF6 /* UberKit-prefix.pch */,
+				3DECB1F662E6E2C515197ADC2127F799 /* UberKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UberKit";
+			sourceTree = "<group>";
+		};
+		C0737A7A494644597EF0292B86D1AC3F /* UberKit */ = {
+			isa = PBXGroup;
+			children = (
+				A8AEF0B80209155A78708426C792BB7F /* NSData+NXOAuth2.h */,
+				3A0B4E15F785A7CD6384E64D87259763 /* NSData+NXOAuth2.m */,
+				1948FB3E2147DA8DFDC3A44ECE9CB130 /* NSString+NXOAuth2.h */,
+				7D72BEE521F20AA545D75573F584DF25 /* NSString+NXOAuth2.m */,
+				65575531D44BBB8F74DBF44190F45E6D /* NSURL+NXOAuth2.h */,
+				D93177725DA0890CAAD491D0B2614096 /* NSURL+NXOAuth2.m */,
+				2D858F57BE0E172DE92CCB139E67BEC6 /* NXOAuth2.h */,
+				294A9C8D2EE828E947628979A1018CA8 /* NXOAuth2AccessToken.h */,
+				4051D1AFB3BB3474546A5D65CF5F06C0 /* NXOAuth2AccessToken.m */,
+				2D6F78D88B84F441053B7BEEB8FEA084 /* NXOAuth2Account.h */,
+				A4D1B02488139D66E0B4483C4C081086 /* NXOAuth2Account.m */,
+				97E139CBE8D6931E1FF707E821D96957 /* NXOAuth2Account+Private.h */,
+				907434EC7234D6912E851FB954A14949 /* NXOAuth2AccountStore.h */,
+				36A268B43001DF43E867186AACBF59C6 /* NXOAuth2AccountStore.m */,
+				E0D41507CDA7AC31950912BA07451D26 /* NXOAuth2Client.h */,
+				1C948AA32575231726C58BDB92C4B0AA /* NXOAuth2Client.m */,
+				ED4DC47DE7F08A5669944C447AA1F5CA /* NXOAuth2ClientDelegate.h */,
+				E87DC429936A197CA832E3A1A065FD27 /* NXOAuth2Connection.h */,
+				B232D4DCCC090F939340795E64D84B6D /* NXOAuth2Connection.m */,
+				E7AE7F840517382C8FEC1ECE2FD9E5CC /* NXOAuth2ConnectionDelegate.h */,
+				9A494530B88E64F4CED1BF7D00735AD2 /* NXOAuth2Constants.h */,
+				B9F288AA9319B9A7A53E78D661B7D545 /* NXOAuth2Constants.m */,
+				5FEB8196AFAAB81FB0CF3067581D8BF8 /* NXOAuth2FileStreamWrapper.h */,
+				C8053509CD4B1DA48685536EC32EAD24 /* NXOAuth2FileStreamWrapper.m */,
+				3A4AD4F29008708127AF4A465611F2DC /* NXOAuth2PostBodyPart.h */,
+				444E7DFA301739F005C26EEC09DC0D12 /* NXOAuth2PostBodyPart.m */,
+				B79B90C395D50F92BE5236F97D9E3206 /* NXOAuth2PostBodyStream.h */,
+				5E1EFE22AC505D6907FC41738AC49C33 /* NXOAuth2PostBodyStream.m */,
+				B21EC5AC9278375C762A80430CDD18DD /* NXOAuth2Request.h */,
+				E2DEAD41656F3AE90DE1C18B4F418F5C /* NXOAuth2Request.m */,
+				19007D8679B0B2E028A5BA4B0BF395B9 /* NXOAuth2TrustDelegate.h */,
+				F274FEB8C076B745900612E26DE224A4 /* UberActivity.h */,
+				2F97BC4B1B6486AB00A5F231 /* UberReceipt.h */,
+				2F97BC4C1B6486AB00A5F231 /* UberReceipt.m */,
+				751B81458557B21585AB5DC2B51402AD /* UberActivity.m */,
+				23F2CC80F85C61096441D660463AE998 /* UberKit.h */,
+				7BF17C6CBC14A54E42B0F6A879CF1D9B /* UberKit.m */,
+				D23ACA455061DD6696955D1261906047 /* UberPrice.h */,
+				AB83D5EBB303C3A2767A2657E0F110AC /* UberPrice.m */,
+				5B2F3D49DC0C44408F524491F1074064 /* UberProduct.h */,
+				CA90AA28E540DC3657B90BF67EDE2688 /* UberProduct.m */,
+				A6858D3CF08D30FD73F6ED9A6BC750F8 /* UberProfile.h */,
+				B2E9DFF3A5B01C586D709E642A2FA35E /* UberProfile.m */,
+				657A5208BC30F9D475414757CB6031CC /* UberPromotion.h */,
+				5FCA59349BC4B5D419281735B006EB8B /* UberPromotion.m */,
+				34554F47FD6BD9E7A5E23F6A27CF80DA /* UberTime.h */,
+				3CBDA8A9A8AA2A3598961B69DDBAB4DD /* UberTime.m */,
+				9C8F3ED31203EFA8746B83A1CDCFC85B /* Support Files */,
+			);
+			path = UberKit;
+			sourceTree = "<group>";
+		};
+		C4363C9A15DF4DA7A694570B86618ED0 /* Pods-WeRideTests */ = {
+			isa = PBXGroup;
+			children = (
+				B98D8D5AC82A60637572872C51D60F45 /* Pods-WeRideTests-acknowledgements.markdown */,
+				BDE862405BE8F938CDC2ABC1AB379CC7 /* Pods-WeRideTests-acknowledgements.plist */,
+				8C806B36982D1F1E73013DC94842A4FB /* Pods-WeRideTests-dummy.m */,
+				ADBF3FE3CE2769A8DE2859288F97259A /* Pods-WeRideTests-resources.sh */,
+				0110386392D15E4BAADD78D179A09A72 /* Pods-WeRideTests.debug.xcconfig */,
+				79B16E4ADD30B76B24243B8D53F6AFCB /* Pods-WeRideTests.release.xcconfig */,
+			);
+			name = "Pods-WeRideTests";
+			path = "Target Support Files/Pods-WeRideTests";
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4F62FB5F0ED969B9B5133B55E04143F /* libPods.a */,
+				EF9986F74020A93A13126B955E9F9D47 /* libPods-WeRide.a */,
+				4802A7C43EADC2F6AC8C378397B4E2F1 /* libPods-WeRideTests.a */,
+				29EBE6C69E55DA1AEC15A732C648C9AB /* libUberKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA81D483F143A18121CB55D9233F5545 /* Pods-WeRide */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFDF7693E7B8513368F48A26CFF4B0 /* Pods-WeRide-acknowledgements.markdown */,
+				5CAAA88A051E750B8689A35055882CCB /* Pods-WeRide-acknowledgements.plist */,
+				5861694D9DB0DED6128E196F57C28526 /* Pods-WeRide-dummy.m */,
+				B9DDD4B982F2DADFB709DDD7AA4A4182 /* Pods-WeRide-resources.sh */,
+				9CF4AB89C2A21412E931462F0E27F93D /* Pods-WeRide.debug.xcconfig */,
+				8980AF89E61F2D535D8F76E7D56D2515 /* Pods-WeRide.release.xcconfig */,
+			);
+			name = "Pods-WeRide";
+			path = "Target Support Files/Pods-WeRide";
+			sourceTree = "<group>";
+		};
+		FCC6F965540745142F6675EF7C9E0E2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0737A7A494644597EF0292B86D1AC3F /* UberKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EE0BBE6E904856E478995001F032DEAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				261E9D570E3E75F5E47C60AA78F2C940 /* NSData+NXOAuth2.h in Headers */,
+				1545BE11B4F707B17799784E3C1995B0 /* NSString+NXOAuth2.h in Headers */,
+				770F924C4C33B1C0AC280421BB340267 /* NSURL+NXOAuth2.h in Headers */,
+				4F151196709088923AF90A37F8AF6227 /* NXOAuth2.h in Headers */,
+				C7C7E8867122145F8C5125ABF790DF4F /* NXOAuth2AccessToken.h in Headers */,
+				E2F1C5AE1EEBFFDDAF2D6A8299CC2664 /* NXOAuth2Account+Private.h in Headers */,
+				B93BE9DEB2DF6306F9A940B2B51FD794 /* NXOAuth2Account.h in Headers */,
+				E4D24758A3A0D4DEC56406A292E33955 /* NXOAuth2AccountStore.h in Headers */,
+				ABA905AC3C83115F2720321D2DE008E4 /* NXOAuth2Client.h in Headers */,
+				41705556D75A19D66D1B29900BE7D236 /* NXOAuth2ClientDelegate.h in Headers */,
+				8345513A57C9E22A71EE239711F068ED /* NXOAuth2Connection.h in Headers */,
+				DA416924833776CCF5AAFDC547ABAB51 /* NXOAuth2ConnectionDelegate.h in Headers */,
+				A7171C61B63E9479EAE4F6C23E58FBF5 /* NXOAuth2Constants.h in Headers */,
+				253029F60A1811F6FBF8970C5A0E60DD /* NXOAuth2FileStreamWrapper.h in Headers */,
+				6758816B692D06D3EB089F584353FBD3 /* NXOAuth2PostBodyPart.h in Headers */,
+				D852CDBBB6706C3669A7197CC2EEFA38 /* NXOAuth2PostBodyStream.h in Headers */,
+				D976119E37943778EA009C219F37D365 /* NXOAuth2Request.h in Headers */,
+				AA7A7AE3AE789ABCE0F612B59FE853F0 /* NXOAuth2TrustDelegate.h in Headers */,
+				2AE68C56675380E44F29A89F1D5E67D7 /* UberActivity.h in Headers */,
+				857B14F07784656505C3869C311F24C3 /* UberKit-umbrella.h in Headers */,
+				73EAC170BBDC3A9F8819525DD6DC402D /* UberKit.h in Headers */,
+				89CF9EBB685D36119CDD76D17D3D3887 /* UberPrice.h in Headers */,
+				BA5D0ECC11FF26BD9C6270F8557B1F66 /* UberProduct.h in Headers */,
+				61A6BA6779C390508681E45E4251C3A9 /* UberProfile.h in Headers */,
+				A35D36CA46E4C08D8A27A337C0425EE7 /* UberPromotion.h in Headers */,
+				298B708F95476EA2EE60AFADDC6717C5 /* UberTime.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0D991E7647338654F8B2E4C7467E824B /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 601EBE105172F82C7B97464B16805E51 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				892B28034A25F8A913541AC9C665E66B /* Sources */,
+				E11DDDD2512CD8EDD8364F0AA583F00B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF8EFB0EB7391A417CA9C9EE6929AE5D /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = C4F62FB5F0ED969B9B5133B55E04143F /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		50AE5C814D1123B4D3FCFB9E4AF18F23 /* Pods-WeRide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48D6B2A45157F4C3EB6FD04F820408BE /* Build configuration list for PBXNativeTarget "Pods-WeRide" */;
+			buildPhases = (
+				886B41122CD7D845B67B2BED9F9D7DB4 /* Sources */,
+				AE82D0C80721021E68D89A1A29A08EB7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				588D1FB04C9506FF34C0ADDDC0583082 /* PBXTargetDependency */,
+			);
+			name = "Pods-WeRide";
+			productName = "Pods-WeRide";
+			productReference = EF9986F74020A93A13126B955E9F9D47 /* libPods-WeRide.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7CD6BF2D6377B3A52FFCF3F0A67D419F /* UberKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 201803969EC12F7C9D938B3459280275 /* Build configuration list for PBXNativeTarget "UberKit" */;
+			buildPhases = (
+				5924336D60A6456CC80500176000A9FB /* Sources */,
+				581DD3717C0BB7BFF0BC1F01A43F91AC /* Frameworks */,
+				EE0BBE6E904856E478995001F032DEAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UberKit;
+			productName = UberKit;
+			productReference = 29EBE6C69E55DA1AEC15A732C648C9AB /* libUberKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C9934F89AFD27DC328CEFEC1BD39E1A6 /* Pods-WeRideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFDF6B76A90AA03C6B1E8B15D591177F /* Build configuration list for PBXNativeTarget "Pods-WeRideTests" */;
+			buildPhases = (
+				2869ECEDF5BA40225B21B8798A974259 /* Sources */,
+				F1F896121D193F4F2597EDC3F3518AA3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0232A0063C362E68F96EC7257D47D90B /* PBXTargetDependency */,
+			);
+			name = "Pods-WeRideTests";
+			productName = "Pods-WeRideTests";
+			productReference = 4802A7C43EADC2F6AC8C378397B4E2F1 /* libPods-WeRideTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D991E7647338654F8B2E4C7467E824B /* Pods */,
+				50AE5C814D1123B4D3FCFB9E4AF18F23 /* Pods-WeRide */,
+				C9934F89AFD27DC328CEFEC1BD39E1A6 /* Pods-WeRideTests */,
+				7CD6BF2D6377B3A52FFCF3F0A67D419F /* UberKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2869ECEDF5BA40225B21B8798A974259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47785F3EA1F9CA61B5101A768D99DA2F /* Pods-WeRideTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5924336D60A6456CC80500176000A9FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D805560B11B598D4117703E55615248 /* NSData+NXOAuth2.m in Sources */,
+				D0B57D8955171F5069178B305F9729B3 /* NSString+NXOAuth2.m in Sources */,
+				B98A17B924C3866BD6D13580C8BA009D /* NSURL+NXOAuth2.m in Sources */,
+				AA3294BB1CBDB9E4301F06ADE6D4E159 /* NXOAuth2AccessToken.m in Sources */,
+				CB1EF1EB5B0C03EA7CE1D0F309984560 /* NXOAuth2Account.m in Sources */,
+				BB88082BFDC0C76E21087282426CF22A /* NXOAuth2AccountStore.m in Sources */,
+				8EF3928C4056E091C38468C7F763463D /* NXOAuth2Client.m in Sources */,
+				03655F74ABBFA09F6C4E5F66B0A0EAD9 /* NXOAuth2Connection.m in Sources */,
+				640EAA0476D827844D4C688C09DCC677 /* NXOAuth2Constants.m in Sources */,
+				0368AF24F67E798411DCBED31EB5529C /* NXOAuth2FileStreamWrapper.m in Sources */,
+				AFE5CEAE74B908E6C4625F8E56AD80B3 /* NXOAuth2PostBodyPart.m in Sources */,
+				C760EA6E10BBC31FCB21F6217A4598D0 /* NXOAuth2PostBodyStream.m in Sources */,
+				61F5F69F668A5013FD61B43854C53387 /* NXOAuth2Request.m in Sources */,
+				07B74FEAEFB43EE7C1EC10ED2B0B44BC /* UberActivity.m in Sources */,
+				88AAEF6198576D81D0026188A80F2F34 /* UberKit-dummy.m in Sources */,
+				508A36B256AD0D16C36F7F1E9751856D /* UberKit.m in Sources */,
+				87B705B221D5D6B9048571918A86F5CF /* UberPrice.m in Sources */,
+				37CF3F03FE11F8DE22A9D94F80227706 /* UberProduct.m in Sources */,
+				A6E704A4599F562B0C58149D52AE58CC /* UberProfile.m in Sources */,
+				0FBB3369C5B90799510C61CD2A751E9E /* UberPromotion.m in Sources */,
+				D55F41848D74D828AA3B910EE130F510 /* UberTime.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		886B41122CD7D845B67B2BED9F9D7DB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5331728F4BA592ABE631BF0EE7254E4 /* Pods-WeRide-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		892B28034A25F8A913541AC9C665E66B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F97BC4D1B6486AB00A5F231 /* UberReceipt.m in Sources */,
+				5460A3F5AEC2CC07BD2AC32BAE8D16E9 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0232A0063C362E68F96EC7257D47D90B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UberKit;
+			target = 7CD6BF2D6377B3A52FFCF3F0A67D419F /* UberKit */;
+			targetProxy = 87A744B15A32CD41548FF57E434C3C8D /* PBXContainerItemProxy */;
+		};
+		588D1FB04C9506FF34C0ADDDC0583082 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UberKit;
+			target = 7CD6BF2D6377B3A52FFCF3F0A67D419F /* UberKit */;
+			targetProxy = 90B7892FB57C4A337F1A8339A44C0073 /* PBXContainerItemProxy */;
+		};
+		EF8EFB0EB7391A417CA9C9EE6929AE5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UberKit;
+			target = 7CD6BF2D6377B3A52FFCF3F0A67D419F /* UberKit */;
+			targetProxy = C071EBAFE6524EBC3709D5DDE7C84E0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03F5DA1E36C52C90E61FED2E2FB8E7CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8980AF89E61F2D535D8F76E7D56D2515 /* Pods-WeRide.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		07B27D7858BFEFA3C7A77A685938441B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2EC6995761C3F091CEF805F6AB6A137 /* UberKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UberKit/UberKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MODULEMAP_FILE = "Target Support Files/UberKit/UberKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0D491647D9FBA81473125ECE87766FEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		107DAB50AF9CD26233EA2956B65846D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2EC6995761C3F091CEF805F6AB6A137 /* UberKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UberKit/UberKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MODULEMAP_FILE = "Target Support Files/UberKit/UberKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3D0A535BAC826A03FA3AC24481AA4E37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E4F86D931A51985D2331ACEBF615FC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C46FEFE7CE67B9CF947B76D066D9B9C0 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		91A5B8F0BF5F476A60AF0B9B65CD8AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF4AB89C2A21412E931462F0E27F93D /* Pods-WeRide.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B5661AF48615FCA816CE3A445D8FA1CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0AEA3245179DCB071E94263CE0528F0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ED7E81F2F219C200612CFD75B90E1F18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0110386392D15E4BAADD78D179A09A72 /* Pods-WeRideTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F9604E2A0176204EE135BAF7513C4235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79B16E4ADD30B76B24243B8D53F6AFCB /* Pods-WeRideTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		201803969EC12F7C9D938B3459280275 /* Build configuration list for PBXNativeTarget "UberKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107DAB50AF9CD26233EA2956B65846D3 /* Debug */,
+				07B27D7858BFEFA3C7A77A685938441B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D491647D9FBA81473125ECE87766FEE /* Debug */,
+				3D0A535BAC826A03FA3AC24481AA4E37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48D6B2A45157F4C3EB6FD04F820408BE /* Build configuration list for PBXNativeTarget "Pods-WeRide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91A5B8F0BF5F476A60AF0B9B65CD8AD2 /* Debug */,
+				03F5DA1E36C52C90E61FED2E2FB8E7CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		601EBE105172F82C7B97464B16805E51 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5661AF48615FCA816CE3A445D8FA1CB /* Debug */,
+				6E4F86D931A51985D2331ACEBF615FC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFDF6B76A90AA03C6B1E8B15D591177F /* Build configuration list for PBXNativeTarget "Pods-WeRideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7E81F2F219C200612CFD75B90E1F18 /* Debug */,
+				F9604E2A0176204EE135BAF7513C4235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

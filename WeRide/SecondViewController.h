@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SecondViewController : UIViewController
-
+#import "UberKit.h"
+@interface SecondViewController : UIViewController<UberKitDelegate>
+@property(nonatomic, retain) NSString *receiptID;
 
 @end
 
