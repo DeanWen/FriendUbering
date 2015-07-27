@@ -10,6 +10,9 @@
 #import "UberKit.h"
 @interface SecondViewController : UIViewController<UberKitDelegate>
 @property(nonatomic, retain) NSString *receiptID;
-
+@property (weak, nonatomic) IBOutlet UIButton *start;
+@property (weak, nonatomic) IBOutlet UIButton *complete;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic, retain) UberKit *uberkit;
 @end
 

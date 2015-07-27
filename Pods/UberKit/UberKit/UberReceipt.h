@@ -12,10 +12,10 @@
 
 
 @property (nonatomic) NSString* request_id;
-@property (nonatomic) float normal_fare;
-@property (nonatomic) float subtotal;
-@property (nonatomic) float total_charged;
-@property (nonatomic) float total_owed;
+@property (nonatomic) NSString* normal_fare;
+@property (nonatomic) NSString* subtotal;
+@property (nonatomic) NSString* total_charged;
+@property (nonatomic) NSString* total_owed;
 @property (nonatomic) NSString *currency_code;
 @property (nonatomic) NSString *duration;
 @property (nonatomic) NSString *distance;

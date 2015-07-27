@@ -212,9 +212,8 @@ NSString * const mobile_safari_string = @"com.apple.mobilesafari";
          {
 
              UberReceipt *receipt = [[UberReceipt alloc] initWithDictionary:result];
-             NSNumber *total = [NSNumber numberWithFloat: receipt.total_charged];
              NSMutableArray *array = [[NSMutableArray alloc] init];
-             [array addObject: total];
+             [array addObject: receipt.total_charged];
   
              completion(array, response, error);
          }

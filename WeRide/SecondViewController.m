@@ -16,8 +16,7 @@
 
 @implementation SecondViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     _receiptID = nil;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -26,17 +25,20 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    [[UberKit sharedInstance] setClientID:@"TRoQcMg6E3QrqVzNTt6-tjoGcIIJq7FU"];
+    [[UberKit sharedInstance] setClientSecret:@"5gz7mKnnU9XxeuH-3yVYHGpestBWzhhdnhkaieOU"];
+    [[UberKit sharedInstance] setRedirectURL:@"weride://response"];
+    [[UberKit sharedInstance] setApplicationName:@"WERIDE"];
+    _uberkit = [UberKit sharedInstance];
+    _uberkit.delegate = self;
+    _textField.text = nil;
     [super viewDidLoad];
     [self callCientAuthenticationMethods];
 }
 
-- (void) callCientAuthenticationMethods
-{
+- (void) callCientAuthenticationMethods {
     UberKit *uberKit = [[UberKit alloc] initWithServerToken:@"vTvzxqyFRw-NTGxgIeQjHcVCm27TVlAJrH96rcvp"]; //Add your server token
-    //[[UberKit sharedInstance] setServerToken:@"YOUR_SERVER_TOKEN"]; //Alternate initialization
-    
     CLLocation *location = [[CLLocation alloc] initWithLatitude:37.7833 longitude:-122.4167];
     CLLocation *endLocation = [[CLLocation alloc] initWithLatitude:37.9 longitude:-122.43];
     
@@ -92,27 +94,19 @@
      }];
 }
 
-- (IBAction)login:(id)sender
-{
-    [[UberKit sharedInstance] setClientID:@"TRoQcMg6E3QrqVzNTt6-tjoGcIIJq7FU"];
-    [[UberKit sharedInstance] setClientSecret:@"5gz7mKnnU9XxeuH-3yVYHGpestBWzhhdnhkaieOU"];
-    [[UberKit sharedInstance] setRedirectURL:@"weride://response"];
-    [[UberKit sharedInstance] setApplicationName:@"WERIDE"];
-    
-    UberKit *uberKit = [UberKit sharedInstance];
-    uberKit.delegate = self;
-    [uberKit startLogin];
+-(IBAction)start:(id)sender {
+    [_uberkit openUberApp];
+}
+- (IBAction)login:(id)sender {
+    [_uberkit startLogin];
 }
 
-- (void) uberKit:(UberKit *)uberKit didReceiveAccessToken:(NSString *)accessToken
-{
+- (void) uberKit:(UberKit *)uberKit didReceiveAccessToken:(NSString *)accessToken {
     NSLog(@"Received access token %@", accessToken);
-    if(accessToken)
-    {
+    if(accessToken) {
         [uberKit getUserActivityWithCompletionHandler:^(NSArray *activities, NSURLResponse *response, NSError *error)
          {
-             if(!error)
-             {
+             if(!error) {
                  NSLog(@"User activity %@", activities);
                  
                  if (activities.count != 0) {
@@ -122,24 +116,19 @@
                      NSLog(@"receipt id is %@", _receiptID);
                      
                      [uberKit getuserLastReceipt:_receiptID withCompletionHandler:^(NSArray *resultsArray, NSURLResponse *response, NSError *error) {
-                         if(!error)
-                         {
-                             NSLog(@"User Receipt %@", [resultsArray objectAtIndex:0]);
-                         }
-                         else
-                         {
+                         if (!error) {
+                             NSLog(@"Last Trip totally costs : %@", [resultsArray objectAtIndex:0]);
+                             [_textField setText:[resultsArray objectAtIndex:0]];
+                         }else {
                              NSLog(@"Error %@", error);
                          }
                      }];
-                     
-                     
-                 }else{
+                 }else {
                      NSLog(@"empty activities");
                  }
                  
              }
-             else
-             {
+             else {
                  NSLog(@"Error %@", error);
              }
          }];
@@ -149,31 +138,23 @@
         
         [uberKit getUserProfileWithCompletionHandler:^(UberProfile *profile, NSURLResponse *response, NSError *error)
          {
-             if(!error)
-             {
+             if(!error) {
                  NSLog(@"User's full name %@ %@", profile.first_name, profile.last_name);
-             }
-             else
-             {
+             }else{
                  NSLog(@"Error %@", error);
              }
          }];
-    }
-    else
-    {
+    }else {
         NSLog(@"No auth token, try again");
     }
 }
 
-- (void) uberKit:(UberKit *)uberKit loginFailedWithError:(NSError *)error
-{
+- (void) uberKit:(UberKit *)uberKit loginFailedWithError:(NSError *)error {
     NSLog(@"Error in login %@", error);
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

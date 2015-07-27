@@ -16,7 +16,7 @@
 		261E9D570E3E75F5E47C60AA78F2C940 /* NSData+NXOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = A8AEF0B80209155A78708426C792BB7F /* NSData+NXOAuth2.h */; };
 		298B708F95476EA2EE60AFADDC6717C5 /* UberTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 34554F47FD6BD9E7A5E23F6A27CF80DA /* UberTime.h */; };
 		2AE68C56675380E44F29A89F1D5E67D7 /* UberActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = F274FEB8C076B745900612E26DE224A4 /* UberActivity.h */; };
-		2F97BC4D1B6486AB00A5F231 /* UberReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97BC4C1B6486AB00A5F231 /* UberReceipt.m */; };
+		2F2C00E81B65B6840090C112 /* UberReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C00E71B65B6840090C112 /* UberReceipt.m */; };
 		37CF3F03FE11F8DE22A9D94F80227706 /* UberProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = CA90AA28E540DC3657B90BF67EDE2688 /* UberProduct.m */; };
 		41705556D75A19D66D1B29900BE7D236 /* NXOAuth2ClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ED4DC47DE7F08A5669944C447AA1F5CA /* NXOAuth2ClientDelegate.h */; };
 		47785F3EA1F9CA61B5101A768D99DA2F /* Pods-WeRideTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C806B36982D1F1E73013DC94842A4FB /* Pods-WeRideTests-dummy.m */; };
@@ -101,8 +101,8 @@
 		29EBE6C69E55DA1AEC15A732C648C9AB /* libUberKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUberKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6F78D88B84F441053B7BEEB8FEA084 /* NXOAuth2Account.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2Account.h; path = UberKit/OAuth2Client/NXOAuth2Account.h; sourceTree = "<group>"; };
 		2D858F57BE0E172DE92CCB139E67BEC6 /* NXOAuth2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NXOAuth2.h; path = UberKit/OAuth2Client/NXOAuth2.h; sourceTree = "<group>"; };
-		2F97BC4B1B6486AB00A5F231 /* UberReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UberReceipt.h; sourceTree = "<group>"; };
-		2F97BC4C1B6486AB00A5F231 /* UberReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UberReceipt.m; sourceTree = "<group>"; };
+		2F2C00E61B65B6840090C112 /* UberReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UberReceipt.h; path = UberKit/UberReceipt.h; sourceTree = "<group>"; };
+		2F2C00E71B65B6840090C112 /* UberReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UberReceipt.m; path = UberKit/UberReceipt.m; sourceTree = "<group>"; };
 		34554F47FD6BD9E7A5E23F6A27CF80DA /* UberTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UberTime.h; path = UberKit/Model/UberTime.h; sourceTree = "<group>"; };
 		36A268B43001DF43E867186AACBF59C6 /* NXOAuth2AccountStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NXOAuth2AccountStore.m; path = UberKit/OAuth2Client/NXOAuth2AccountStore.m; sourceTree = "<group>"; };
 		3A0B4E15F785A7CD6384E64D87259763 /* NSData+NXOAuth2.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+NXOAuth2.m"; path = "UberKit/OAuth2Client/NSData+NXOAuth2.m"; sourceTree = "<group>"; };
@@ -303,9 +303,9 @@
 				B21EC5AC9278375C762A80430CDD18DD /* NXOAuth2Request.h */,
 				E2DEAD41656F3AE90DE1C18B4F418F5C /* NXOAuth2Request.m */,
 				19007D8679B0B2E028A5BA4B0BF395B9 /* NXOAuth2TrustDelegate.h */,
+				2F2C00E61B65B6840090C112 /* UberReceipt.h */,
+				2F2C00E71B65B6840090C112 /* UberReceipt.m */,
 				F274FEB8C076B745900612E26DE224A4 /* UberActivity.h */,
-				2F97BC4B1B6486AB00A5F231 /* UberReceipt.h */,
-				2F97BC4C1B6486AB00A5F231 /* UberReceipt.m */,
 				751B81458557B21585AB5DC2B51402AD /* UberActivity.m */,
 				23F2CC80F85C61096441D660463AE998 /* UberKit.h */,
 				7BF17C6CBC14A54E42B0F6A879CF1D9B /* UberKit.m */,
@@ -556,7 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F97BC4D1B6486AB00A5F231 /* UberReceipt.m in Sources */,
+				2F2C00E81B65B6840090C112 /* UberReceipt.m in Sources */,
 				5460A3F5AEC2CC07BD2AC32BAE8D16E9 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
