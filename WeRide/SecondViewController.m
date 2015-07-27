@@ -48,6 +48,7 @@
          {
              UberProduct *product = [products objectAtIndex:0];
              NSLog(@"Product name of first %@", product.product_description);
+             NSLog(@"Product id %@", product.product_id);
          }
          else
          {
@@ -132,9 +133,6 @@
                  NSLog(@"Error %@", error);
              }
          }];
-        
-        
-
         
         [uberKit getUserProfileWithCompletionHandler:^(UberProfile *profile, NSURLResponse *response, NSError *error)
          {

@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+//@property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
+//@property (nonatomic, strong) NSArray *arr;
+//@property (nonatomic, strong) NSArray *friends;
+@property (nonatomic, strong) NSMutableArray *ids;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end
