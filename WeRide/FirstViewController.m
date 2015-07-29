@@ -148,8 +148,8 @@
     NSDictionary *innerDict;
     NSString *name;
     NSString *email;
-    NSString *start_time = nil;
-    NSString *end_time = nil;
+    NSString *start_time = @"dummy";
+    NSString *end_time = @"dummy";
     
     for (FriendItem *item in _ids) {
         if (item.selected) {
