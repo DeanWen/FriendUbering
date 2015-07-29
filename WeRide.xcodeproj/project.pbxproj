@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F138D1F1B686C070053CF89 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D141B686C070053CF89 /* MyTableViewCell.m */; };
+		2F138D201B686C070053CF89 /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D151B686C070053CF89 /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2F138D211B686C070053CF89 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D171B686C070053CF89 /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2F138D221B686C070053CF89 /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D191B686C070053CF89 /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2F138D231B686C070053CF89 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D1B1B686C070053CF89 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2F138D241B686C070053CF89 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D1E1B686C070053CF89 /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2F138D271B686C560053CF89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D261B686C560053CF89 /* ViewController.m */; };
 		2FA680AB1B62CAF50025D905 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680AA1B62CAF50025D905 /* main.m */; };
 		2FA680AE1B62CAF50025D905 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680AD1B62CAF50025D905 /* AppDelegate.m */; };
 		2FA680B11B62CAF50025D905 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680B01B62CAF50025D905 /* FirstViewController.m */; };
-		2FA680B41B62CAF50025D905 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680B31B62CAF50025D905 /* SecondViewController.m */; };
 		2FA680B71B62CAF50025D905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA680B51B62CAF50025D905 /* Main.storyboard */; };
 		2FA680B91B62CAF50025D905 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA680B81B62CAF50025D905 /* Images.xcassets */; };
 		2FA680BC1B62CAF50025D905 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA680BA1B62CAF50025D905 /* LaunchScreen.xib */; };
@@ -38,6 +44,20 @@
 /* Begin PBXFileReference section */
 		0106F42C4E2FA42051468CBD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1145071798A53F6759BDD07C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F138D131B686C070053CF89 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTableViewCell.h; path = ../MyTableViewCell.h; sourceTree = "<group>"; };
+		2F138D141B686C070053CF89 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyTableViewCell.m; path = ../MyTableViewCell.m; sourceTree = "<group>"; };
+		2F138D151B686C070053CF89 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStream+SKPSMTPExtensions.m"; path = "../NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		2F138D161B686C070053CF89 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Transcoder.h; path = ../Base64Transcoder.h; sourceTree = "<group>"; };
+		2F138D171B686C070053CF89 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64Transcoder.m; path = ../Base64Transcoder.m; sourceTree = "<group>"; };
+		2F138D181B686C070053CF89 /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSK_CFUtilities.h; path = ../HSK_CFUtilities.h; sourceTree = "<group>"; };
+		2F138D191B686C070053CF89 /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSK_CFUtilities.m; path = ../HSK_CFUtilities.m; sourceTree = "<group>"; };
+		2F138D1A1B686C070053CF89 /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64Additions.h"; path = "../NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		2F138D1B1B686C070053CF89 /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64Additions.m"; path = "../NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		2F138D1C1B686C070053CF89 /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSStream+SKPSMTPExtensions.h"; path = "../NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		2F138D1D1B686C070053CF89 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKPSMTPMessage.h; path = ../SKPSMTPMessage.h; sourceTree = "<group>"; };
+		2F138D1E1B686C070053CF89 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKPSMTPMessage.m; path = ../SKPSMTPMessage.m; sourceTree = "<group>"; };
+		2F138D251B686C560053CF89 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		2F138D261B686C560053CF89 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		2FA680A51B62CAF50025D905 /* WeRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA680A91B62CAF50025D905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA680AA1B62CAF50025D905 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,8 +65,6 @@
 		2FA680AD1B62CAF50025D905 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2FA680AF1B62CAF50025D905 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		2FA680B01B62CAF50025D905 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		2FA680B21B62CAF50025D905 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		2FA680B31B62CAF50025D905 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2FA680B61B62CAF50025D905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FA680B81B62CAF50025D905 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2FA680BB1B62CAF50025D905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -87,6 +105,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F138D281B686C650053CF89 /* getoff */ = {
+			isa = PBXGroup;
+			children = (
+				2F138D251B686C560053CF89 /* ViewController.h */,
+				2F138D261B686C560053CF89 /* ViewController.m */,
+				2F138D131B686C070053CF89 /* MyTableViewCell.h */,
+				2F138D141B686C070053CF89 /* MyTableViewCell.m */,
+				2F138D151B686C070053CF89 /* NSStream+SKPSMTPExtensions.m */,
+				2F138D161B686C070053CF89 /* Base64Transcoder.h */,
+				2F138D171B686C070053CF89 /* Base64Transcoder.m */,
+				2F138D181B686C070053CF89 /* HSK_CFUtilities.h */,
+				2F138D191B686C070053CF89 /* HSK_CFUtilities.m */,
+				2F138D1A1B686C070053CF89 /* NSData+Base64Additions.h */,
+				2F138D1B1B686C070053CF89 /* NSData+Base64Additions.m */,
+				2F138D1C1B686C070053CF89 /* NSStream+SKPSMTPExtensions.h */,
+				2F138D1D1B686C070053CF89 /* SKPSMTPMessage.h */,
+				2F138D1E1B686C070053CF89 /* SKPSMTPMessage.m */,
+			);
+			name = getoff;
+			sourceTree = "<group>";
+		};
+		2F138D291B686C7A0053CF89 /* fb */ = {
+			isa = PBXGroup;
+			children = (
+				2FDC9FB71B66BB5900646D64 /* BlueBackground.png */,
+				2FDC9FB81B66BB5900646D64 /* fb-login-button.png */,
+				2FDC9FAD1B66BB2100646D64 /* FriendItem.h */,
+				2FDC9FAE1B66BB2100646D64 /* FriendItem.m */,
+				2FDC9FAF1B66BB2100646D64 /* LoginFBViewController.h */,
+				2FDC9FB01B66BB2100646D64 /* LoginFBViewController.m */,
+				2FA680AF1B62CAF50025D905 /* FirstViewController.h */,
+				2FA680B01B62CAF50025D905 /* FirstViewController.m */,
+			);
+			name = fb;
+			sourceTree = "<group>";
+		};
 		2FA6809C1B62CAF50025D905 = {
 			isa = PBXGroup;
 			children = (
@@ -110,18 +164,10 @@
 		2FA680A71B62CAF50025D905 /* WeRide */ = {
 			isa = PBXGroup;
 			children = (
-				2FDC9FB71B66BB5900646D64 /* BlueBackground.png */,
-				2FDC9FB81B66BB5900646D64 /* fb-login-button.png */,
-				2FDC9FAD1B66BB2100646D64 /* FriendItem.h */,
-				2FDC9FAE1B66BB2100646D64 /* FriendItem.m */,
-				2FDC9FAF1B66BB2100646D64 /* LoginFBViewController.h */,
-				2FDC9FB01B66BB2100646D64 /* LoginFBViewController.m */,
+				2F138D281B686C650053CF89 /* getoff */,
+				2F138D291B686C7A0053CF89 /* fb */,
 				2FA680AC1B62CAF50025D905 /* AppDelegate.h */,
 				2FA680AD1B62CAF50025D905 /* AppDelegate.m */,
-				2FA680AF1B62CAF50025D905 /* FirstViewController.h */,
-				2FA680B01B62CAF50025D905 /* FirstViewController.m */,
-				2FA680B21B62CAF50025D905 /* SecondViewController.h */,
-				2FA680B31B62CAF50025D905 /* SecondViewController.m */,
 				2FA680B51B62CAF50025D905 /* Main.storyboard */,
 				2FA680B81B62CAF50025D905 /* Images.xcassets */,
 				2FA680BA1B62CAF50025D905 /* LaunchScreen.xib */,
@@ -314,8 +360,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F138D231B686C070053CF89 /* NSData+Base64Additions.m in Sources */,
+				2F138D221B686C070053CF89 /* HSK_CFUtilities.m in Sources */,
+				2F138D241B686C070053CF89 /* SKPSMTPMessage.m in Sources */,
+				2F138D211B686C070053CF89 /* Base64Transcoder.m in Sources */,
 				2FDC9FB21B66BB2100646D64 /* LoginFBViewController.m in Sources */,
-				2FA680B41B62CAF50025D905 /* SecondViewController.m in Sources */,
+				2F138D201B686C070053CF89 /* NSStream+SKPSMTPExtensions.m in Sources */,
+				2F138D271B686C560053CF89 /* ViewController.m in Sources */,
+				2F138D1F1B686C070053CF89 /* MyTableViewCell.m in Sources */,
 				2FA680AE1B62CAF50025D905 /* AppDelegate.m in Sources */,
 				2FA680B11B62CAF50025D905 /* FirstViewController.m in Sources */,
 				2FDC9FB11B66BB2100646D64 /* FriendItem.m in Sources */,
