@@ -253,7 +253,7 @@
     
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     [df setDateFormat:@"HH:mm:ss"];
-    int total_seconds = 0;
+    double total_seconds = 0;
     for(id key in plistDict) {
         NSDictionary *innerDict = [plistDict objectForKey:key];
         NSString *cur_starttime = [innerDict objectForKey:@"start_time"];
@@ -263,6 +263,7 @@
         NSTimeInterval interval = [new_endtime timeIntervalSinceDate:new_starttime];
         total_seconds += interval;
     }
+    NSLog(@"total seconds: %f", total_seconds);
     
     for(id key in plistDict) {
         if([key isEqualToString: _holder_email]) {
@@ -275,9 +276,13 @@
         NSDate *new_starttime = [df dateFromString:cur_starttime];
         NSDate *new_endtime = [df dateFromString:cur_endtime];
         NSTimeInterval interval = [new_endtime timeIntervalSinceDate:new_starttime];
+        NSLog(@"here is interval : %f", interval);
         
-        double price = (double)(interval / total_seconds) *  [_amount.text doubleValue];
-        
+        NSString *substring = [_amount.text substringFromIndex:1];
+        double price = (double)(interval / total_seconds) *  [substring doubleValue];
+        NSLog(@"%@", substring);
+        NSLog(@"%f", [substring doubleValue]);
+        NSLog(@"%f", price);
         NSLog(@"Start Sending");
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -314,7 +319,7 @@
         
         testMsg.delegate = self;
         
-        NSString *content = [NSString stringWithFormat:@"Please pay your bill(%@) to %@(%@).", price, _holder, _holder_email];
+        NSString *content = [NSString stringWithFormat:@"Please pay your bill($%.2f) to %@(%@).", price, _holder, _holder_email];
         
         NSDictionary *plainPart = [NSDictionary dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey,
                                    
