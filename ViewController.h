@@ -15,7 +15,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *amount;
 @property (nonatomic, retain) UberKit *uberkit;
 @property (nonatomic, retain) NSString *receipt;
-
+@property (nonatomic, retain) NSString *holder;
+@property (nonatomic, retain) NSString *holder_email;
+- (IBAction)start:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 - (IBAction)send:(id)sender;
 - (IBAction)finishTrip:(id)sender;
 @end

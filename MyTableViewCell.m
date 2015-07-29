@@ -37,8 +37,8 @@
     {
         plistPath = [[NSBundle mainBundle] pathForResource:@"manuallyData" ofType:@"plist"];
     }
+    
     NSMutableDictionary *plistDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
-    NSLog(@"%@", _email.text);
     NSDictionary *innerDict = [plistDict objectForKey:_email.text];
     NSMutableDictionary *newDict = [[NSMutableDictionary alloc] init];
     [newDict setObject:[innerDict objectForKey:@"name"] forKey:@"name"];
@@ -48,6 +48,23 @@
     [plistDict setObject:newDict forKey:_email.text];
     // This writes the array to a plist file. If this file does not already exist, it creates a new one.
     [plistDict writeToFile:plistPath atomically: TRUE];
+    
+    NSMutableDictionary *oldDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+    NSMutableDictionary *rs = [[NSMutableDictionary alloc]init];
+    for(id key in oldDict) {
+        NSDictionary *innerDict = [oldDict objectForKey:key];
+        NSMutableDictionary *newDict = [[NSMutableDictionary alloc] init];
+        [newDict setObject:[innerDict objectForKey:@"name"] forKey:@"name"];
+        if([[innerDict objectForKey:@"end_time"] isEqualToString: @"dummy"]) {
+            [newDict setObject:cur_time forKey:@"start_time"];
+        } else {
+            [newDict setObject:[innerDict objectForKey:@"start_time"] forKey:@"start_time"];
+        }
+        [newDict setObject:[innerDict objectForKey:@"end_time"] forKey:@"end_time"];
+        [rs setObject:newDict forKey:key];
+    }
+    [rs writeToFile:plistPath atomically: TRUE];
+    
     _getOffButton.enabled = NO;
 }
 @end

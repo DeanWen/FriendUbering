@@ -39,6 +39,8 @@
     
     [_amount setText:@"$0.00"];
     [_amount setEnabled:NO];
+    _holder = nil;
+    _holder_email = nil;
     
     [super viewDidLoad];
     
@@ -162,14 +164,17 @@
                  NSLog(@"Error %@", error);
              }
          }];
-//        [uberKit getUserProfileWithCompletionHandler:^(UberProfile *profile, NSURLResponse *response, NSError *error)
-//         {
-//             if(!error) {
-//                 NSLog(@"User's full name %@ %@", profile.first_name, profile.last_name);
-//             }else{
-//                 NSLog(@"Error %@", error);
-//             }
-//         }];
+        [uberKit getUserProfileWithCompletionHandler:^(UberProfile *profile, NSURLResponse *response, NSError *error)
+         {
+             if(!error) {
+                 //NSLog(@"User's full name %@ %@", profile.first_name, profile.last_name);
+                 _holder = [NSString stringWithFormat:@"%@ %@", profile.first_name, profile.last_name];
+                 _holder_email = profile.email;
+                 NSLog(@"%@, %@", _holder, _holder_email);
+             }else{
+                 NSLog(@"Error %@", error);
+             }
+         }];
     }else {
         NSLog(@"No auth token, try again");
     }
@@ -206,6 +211,35 @@
     return cell;
 }
 
+- (IBAction)start:(id)sender {
+    NSDate *now = [NSDate date];
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"HH:mm:ss"];
+    NSString *cur_time = [df stringFromDate:now];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    // get documents path
+    NSString *documentsPath = [paths objectAtIndex:0];
+    // get the path to our Data/plist file
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Data.plist"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"manuallyData" ofType:@"plist"];
+    }
+    NSMutableDictionary *plistDict = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
+    NSMutableDictionary *rs = [[NSMutableDictionary alloc]init];
+    for(id key in plistDict) {
+        NSLog(@"%@", key);
+        NSDictionary *innerDict = [plistDict objectForKey:key];
+        NSMutableDictionary *newDict = [[NSMutableDictionary alloc] init];
+        [newDict setObject:[innerDict objectForKey:@"name"] forKey:@"name"];
+        [newDict setObject:cur_time forKey:@"start_time"];
+        [newDict setObject:[innerDict objectForKey:@"end_time"] forKey:@"end_time"];
+        [rs setObject:newDict forKey:key];
+    }
+    [rs writeToFile:plistPath atomically: TRUE];
+    _startButton.enabled = NO;
+}
+
 - (IBAction)send:(id)sender {
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
     // get documents path
@@ -216,7 +250,34 @@
         plistPath = [[NSBundle mainBundle] pathForResource:@"manuallyData" ofType:@"plist"];
     }
     NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"HH:mm:ss"];
+    int total_seconds = 0;
     for(id key in plistDict) {
+        NSDictionary *innerDict = [plistDict objectForKey:key];
+        NSString *cur_starttime = [innerDict objectForKey:@"start_time"];
+        NSString *cur_endtime = [innerDict objectForKey:@"end_time"];
+        NSDate *new_starttime = [df dateFromString:cur_starttime];
+        NSDate *new_endtime = [df dateFromString:cur_endtime];
+        NSTimeInterval interval = [new_endtime timeIntervalSinceDate:new_starttime];
+        total_seconds += interval;
+    }
+    
+    for(id key in plistDict) {
+        if([key isEqualToString: _holder_email]) {
+            continue;
+        }
+        
+        NSDictionary *innerDict = [plistDict objectForKey:key];
+        NSString *cur_starttime = [innerDict objectForKey:@"start_time"];
+        NSString *cur_endtime = [innerDict objectForKey:@"end_time"];
+        NSDate *new_starttime = [df dateFromString:cur_starttime];
+        NSDate *new_endtime = [df dateFromString:cur_endtime];
+        NSTimeInterval interval = [new_endtime timeIntervalSinceDate:new_starttime];
+        
+        double price = (double)(interval / total_seconds) *  [_amount.text doubleValue];
+        
         NSLog(@"Start Sending");
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -253,9 +314,11 @@
         
         testMsg.delegate = self;
         
+        NSString *content = [NSString stringWithFormat:@"Please pay your bill(%@) to %@(%@).", price, _holder, _holder_email];
+        
         NSDictionary *plainPart = [NSDictionary dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey,
                                    
-                                   @"Test message from Xiaodong",kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey,nil];
+                                   content,kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey,nil];
         //Logic for attach file.
         
         //	NSDictionary *vcfPart = [NSDictionary dictionaryWithObjectsAndKeys:@"text/directory;\r\n\tx-unix-mode=0644;\r\n\tname=\"sample.pdf\"",kSKPSMTPPartContentTypeKey,@"attachment;\r\n\tfilename=\"sample.pdf\"",kSKPSMTPPartContentDispositionKey,[dataObj encodeBase64ForData],kSKPSMTPPartMessageKey,@"base64",kSKPSMTPPartContentTransferEncodingKey,nil];
