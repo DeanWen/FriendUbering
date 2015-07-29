@@ -147,7 +147,8 @@
                          if (!error) {
                              NSString *bill = [resultsArray objectAtIndex:0];
                              NSLog(@"Last Trip totally costs : %@", bill);
-                             [_amount setText: bill];
+                             //[_amount setText: bill];
+                             [_amount performSelectorOnMainThread:@selector(setText:) withObject:bill waitUntilDone:NO];
                          }else {
                              NSLog(@"Error %@", error);
                          }
