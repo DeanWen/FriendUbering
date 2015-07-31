@@ -45,8 +45,36 @@
     [super viewDidLoad];
     
 
+//    names = [[NSMutableArray alloc] init];
+//    emails = [[NSMutableArray alloc] init];
+//    
+//    
+//    
+//    // Do any additional setup after loading the view, typically from a nib.
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+//    // get documents path
+//    NSString *documentsPath = [paths objectAtIndex:0];
+//    NSLog(@"%@", documentsPath);
+//    // get the path to our Data/plist file
+//    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Data.plist"];
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
+//        plistPath = [[NSBundle mainBundle] pathForResource:@"manuallyData" ofType:@"plist"];
+//    }
+//    NSDictionary *plistDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+//    for(id key in plistDict) {
+//        id value = [plistDict objectForKey:key];
+//        [emails addObject:key];
+//        [names addObject:[value objectForKey:@"name"]];
+//    }
+//    [_tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
     names = [[NSMutableArray alloc] init];
     emails = [[NSMutableArray alloc] init];
+    
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
     // get documents path
@@ -63,9 +91,7 @@
         [emails addObject:key];
         [names addObject:[value objectForKey:@"name"]];
     }
-}
-- (void)viewWillAppear:(BOOL)animated{
-    
+    [_tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 
 #pragma Uber

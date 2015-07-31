@@ -20,6 +20,7 @@
 - (IBAction)start:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 - (IBAction)send:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)finishTrip:(id)sender;
 @end
 
