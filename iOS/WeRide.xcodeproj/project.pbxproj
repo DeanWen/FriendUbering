@@ -14,11 +14,12 @@
 		2F138D231B686C070053CF89 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D1B1B686C070053CF89 /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2F138D241B686C070053CF89 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D1E1B686C070053CF89 /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2F138D271B686C560053CF89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F138D261B686C560053CF89 /* ViewController.m */; };
+		2F4939881B6C4B3E002784A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA680B81B62CAF50025D905 /* Images.xcassets */; };
+		2F49398F1B6C5EE9002784A7 /* myCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F49398D1B6C5EE9002784A7 /* myCell.m */; };
 		2FA680AB1B62CAF50025D905 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680AA1B62CAF50025D905 /* main.m */; };
 		2FA680AE1B62CAF50025D905 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680AD1B62CAF50025D905 /* AppDelegate.m */; };
 		2FA680B11B62CAF50025D905 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680B01B62CAF50025D905 /* FirstViewController.m */; };
 		2FA680B71B62CAF50025D905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FA680B51B62CAF50025D905 /* Main.storyboard */; };
-		2FA680B91B62CAF50025D905 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FA680B81B62CAF50025D905 /* Images.xcassets */; };
 		2FA680BC1B62CAF50025D905 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA680BA1B62CAF50025D905 /* LaunchScreen.xib */; };
 		2FA680C81B62CAF50025D905 /* WeRideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA680C71B62CAF50025D905 /* WeRideTests.m */; };
 		2FD0575E1B66B737005EEBEC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD0575B1B66B737005EEBEC /* FBSDKCoreKit.framework */; };
@@ -26,8 +27,6 @@
 		2FD057601B66B737005EEBEC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD0575D1B66B737005EEBEC /* FBSDKShareKit.framework */; };
 		2FDC9FB11B66BB2100646D64 /* FriendItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC9FAE1B66BB2100646D64 /* FriendItem.m */; };
 		2FDC9FB21B66BB2100646D64 /* LoginFBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC9FB01B66BB2100646D64 /* LoginFBViewController.m */; };
-		2FDC9FB91B66BB5900646D64 /* BlueBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC9FB71B66BB5900646D64 /* BlueBackground.png */; };
-		2FDC9FBA1B66BB5900646D64 /* fb-login-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC9FB81B66BB5900646D64 /* fb-login-button.png */; };
 		BA09C2F3263D8B3C60AB55B5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1145071798A53F6759BDD07C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +57,8 @@
 		2F138D1E1B686C070053CF89 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKPSMTPMessage.m; path = ../SKPSMTPMessage.m; sourceTree = "<group>"; };
 		2F138D251B686C560053CF89 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		2F138D261B686C560053CF89 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+		2F49398C1B6C5EE9002784A7 /* myCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCell.h; sourceTree = "<group>"; };
+		2F49398D1B6C5EE9002784A7 /* myCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCell.m; sourceTree = "<group>"; };
 		2FA680A51B62CAF50025D905 /* WeRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FA680A91B62CAF50025D905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FA680AA1B62CAF50025D905 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,8 +79,6 @@
 		2FDC9FAE1B66BB2100646D64 /* FriendItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendItem.m; sourceTree = "<group>"; };
 		2FDC9FAF1B66BB2100646D64 /* LoginFBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginFBViewController.h; sourceTree = "<group>"; };
 		2FDC9FB01B66BB2100646D64 /* LoginFBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginFBViewController.m; sourceTree = "<group>"; };
-		2FDC9FB71B66BB5900646D64 /* BlueBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueBackground.png; sourceTree = "<group>"; };
-		2FDC9FB81B66BB5900646D64 /* fb-login-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb-login-button.png"; sourceTree = "<group>"; };
 		A3AF216D7A3AA11A64598A9E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +111,29 @@
 				2F138D261B686C560053CF89 /* ViewController.m */,
 				2F138D131B686C070053CF89 /* MyTableViewCell.h */,
 				2F138D141B686C070053CF89 /* MyTableViewCell.m */,
+				2F4939871B6C2F76002784A7 /* email */,
+			);
+			name = getoff;
+			sourceTree = "<group>";
+		};
+		2F138D291B686C7A0053CF89 /* fb */ = {
+			isa = PBXGroup;
+			children = (
+				2F49398C1B6C5EE9002784A7 /* myCell.h */,
+				2F49398D1B6C5EE9002784A7 /* myCell.m */,
+				2FDC9FAD1B66BB2100646D64 /* FriendItem.h */,
+				2FDC9FAE1B66BB2100646D64 /* FriendItem.m */,
+				2FDC9FAF1B66BB2100646D64 /* LoginFBViewController.h */,
+				2FDC9FB01B66BB2100646D64 /* LoginFBViewController.m */,
+				2FA680AF1B62CAF50025D905 /* FirstViewController.h */,
+				2FA680B01B62CAF50025D905 /* FirstViewController.m */,
+			);
+			name = fb;
+			sourceTree = "<group>";
+		};
+		2F4939871B6C2F76002784A7 /* email */ = {
+			isa = PBXGroup;
+			children = (
 				2F138D151B686C070053CF89 /* NSStream+SKPSMTPExtensions.m */,
 				2F138D161B686C070053CF89 /* Base64Transcoder.h */,
 				2F138D171B686C070053CF89 /* Base64Transcoder.m */,
@@ -123,22 +145,7 @@
 				2F138D1D1B686C070053CF89 /* SKPSMTPMessage.h */,
 				2F138D1E1B686C070053CF89 /* SKPSMTPMessage.m */,
 			);
-			name = getoff;
-			sourceTree = "<group>";
-		};
-		2F138D291B686C7A0053CF89 /* fb */ = {
-			isa = PBXGroup;
-			children = (
-				2FDC9FB71B66BB5900646D64 /* BlueBackground.png */,
-				2FDC9FB81B66BB5900646D64 /* fb-login-button.png */,
-				2FDC9FAD1B66BB2100646D64 /* FriendItem.h */,
-				2FDC9FAE1B66BB2100646D64 /* FriendItem.m */,
-				2FDC9FAF1B66BB2100646D64 /* LoginFBViewController.h */,
-				2FDC9FB01B66BB2100646D64 /* LoginFBViewController.m */,
-				2FA680AF1B62CAF50025D905 /* FirstViewController.h */,
-				2FA680B01B62CAF50025D905 /* FirstViewController.m */,
-			);
-			name = fb;
+			name = email;
 			sourceTree = "<group>";
 		};
 		2FA6809C1B62CAF50025D905 = {
@@ -305,11 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FDC9FBA1B66BB5900646D64 /* fb-login-button.png in Resources */,
+				2F4939881B6C4B3E002784A7 /* Images.xcassets in Resources */,
 				2FA680B71B62CAF50025D905 /* Main.storyboard in Resources */,
-				2FDC9FB91B66BB5900646D64 /* BlueBackground.png in Resources */,
 				2FA680BC1B62CAF50025D905 /* LaunchScreen.xib in Resources */,
-				2FA680B91B62CAF50025D905 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +376,7 @@
 				2FA680AE1B62CAF50025D905 /* AppDelegate.m in Sources */,
 				2FA680B11B62CAF50025D905 /* FirstViewController.m in Sources */,
 				2FDC9FB11B66BB2100646D64 /* FriendItem.m in Sources */,
+				2F49398F1B6C5EE9002784A7 /* myCell.m in Sources */,
 				2FA680AB1B62CAF50025D905 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +503,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0106F42C4E2FA42051468CBD /* Pods.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,7 +520,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3AF216D7A3AA11A64598A9E /* Pods.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

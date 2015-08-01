@@ -6,6 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.victorsima.uber.UberClient;
+
+import retrofit.RestAdapter;
+
 
 public class FBActivity extends ActionBarActivity {
 
@@ -19,7 +23,8 @@ public class FBActivity extends ActionBarActivity {
 
     public void callUber(View view) {
         //call uber
-
+        UberClient client = new UberClient("4XTTTGqI9Ncyq4MsbDP8eHbLFg7oXkNF", "SfxjExwdrL67dhoOwFAajxrL1mos3Yen0faf2eLV", "http://localhost", RestAdapter.LogLevel.BASIC);
+        System.out.println(client.getApiService().getMe().getFirstName());
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

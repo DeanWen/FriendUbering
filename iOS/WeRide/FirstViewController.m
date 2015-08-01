@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "LoginFBViewController.h"
 #import "FriendItem.h"
+#import "myCell.h"
 
 @interface FirstViewController ()
 
@@ -17,24 +18,27 @@
 @implementation FirstViewController
 
 - (void)viewDidLoad {
-
-        [[UberKit sharedInstance] setClientID:@"TRoQcMg6E3QrqVzNTt6-tjoGcIIJq7FU"];
-        [[UberKit sharedInstance] setClientSecret:@"5gz7mKnnU9XxeuH-3yVYHGpestBWzhhdnhkaieOU"];
-        [[UberKit sharedInstance] setRedirectURL:@"weride://response"];
-        [[UberKit sharedInstance] setApplicationName:@"WERIDE"];
-        _uberkit = [UberKit sharedInstance];
-        _uberkit.delegate = self;
+    
+    [[UberKit sharedInstance] setClientID:@"TRoQcMg6E3QrqVzNTt6-tjoGcIIJq7FU"];
+    [[UberKit sharedInstance] setClientSecret:@"5gz7mKnnU9XxeuH-3yVYHGpestBWzhhdnhkaieOU"];
+    [[UberKit sharedInstance] setRedirectURL:@"weride://response"];
+    [[UberKit sharedInstance] setApplicationName:@"WERIDE"];
+    _uberkit = [UberKit sharedInstance];
+    _uberkit.delegate = self;
     
     [super viewDidLoad];
     _ids = [[NSMutableArray alloc] init];
     UIEdgeInsets contentInset = self.tableView.contentInset;
     contentInset.top = 20;
     [self.tableView setContentInset:contentInset];
+    [self.tableView setBackgroundView:nil];
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
+    [self.tableView setOpaque:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
+    
     if ([FBSDKAccessToken currentAccessToken] == nil) {
         UIViewController *viewController =
         [[UIStoryboard storyboardWithName:@"Main"
@@ -45,19 +49,19 @@
     [self.ids removeAllObjects];
     FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"me/friends"
                                                                    parameters:nil];
-//    NSArray *idArr;
+    //    NSArray *idArr;
     [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             // result is a dictionary with the user's Facebook data
             NSDictionary *data = (NSDictionary *)result;
             
             NSArray *arr = [data objectForKey:@"data"];
-
+            
             NSDictionary *para = @{@"fields": @"email,name"};
             for (NSDictionary *item in arr) {
-
+                
                 NSString *userId = [item valueForKey:@"id"];
-              
+                
                 
                 FBSDKGraphRequest *request2 = [[FBSDKGraphRequest alloc] initWithGraphPath:userId
                                                                                 parameters:para
@@ -67,26 +71,26 @@
                     if (!error) {
                         // result is a dictionary with the user's Facebook data
                         NSDictionary *data = (NSDictionary *)result;
-
+                        
                         FriendItem *item = [[FriendItem alloc] init];
                         item.name = [data valueForKey:@"name"];
                         
                         item.email = [data valueForKey:@"email"];
-
+                        
                         item.selected = NO;
                         [self.ids addObject:item];
-
+                        
                     }
                     NSLog(@"%lu", _ids.count);
                     [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-    
-
+                    
+                    
                 }];
                 
             }
             
-
-          
+            
+            
         }
     }];
     
@@ -105,7 +109,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     // Return the number of rows in the section.
-   
+    
     return [self.ids count];
 }
 
@@ -117,17 +121,21 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    myCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"cell"];
+        cell = [[myCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"cell"];
     }
     FriendItem *item = _ids[indexPath.row];
-    cell.textLabel.text = item.name;
-    cell.detailTextLabel.text = item.email;
+    cell.name.text = item.name;
+    cell.email.text = item.email;
+//    cell.textLabel.text = item.name;
+//    cell.detailTextLabel.text = item.email;
     
     if (item.selected) {
+        [cell.status setImage:[UIImage imageNamed:@"tick-07"]];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
+        [cell.status setImage:nil];
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
@@ -160,35 +168,35 @@
             innerDict = [NSDictionary dictionaryWithObjectsAndKeys:name, @"name",
                          start_time, @"start_time",
                          end_time, @"end_time",
-                          nil];
+                         nil];
             [rootObj setObject:innerDict forKey:item.email];
         }
     }
     
     [rootObj writeToFile:plistPath atomically:TRUE];
     
-//    NSMutableArray *array = [[NSMutableArray alloc] init];
-//    [array addObject:@"aaa"];
-//    [array addObject:@"aaa"];
-//    [array addObject:@"aaa"];
-//    [array addObject:@"aaa"];
-//    [array addObject:@"aaa"];
-//    
-//    // get paths from root direcory
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
-//    // get documents path
-//    NSString *documentsPath = [paths objectAtIndex:0];
-//    // get the path to our Data/plist file
-//    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Data.plist"];
-//    
-//    // This writes the array to a plist file. If this file does not already exist, it creates a new one.
-//    [array writeToFile:plistPath atomically: TRUE];
-//    
-//    NSLog(@"%@", plistPath);
+    //    NSMutableArray *array = [[NSMutableArray alloc] init];
+    //    [array addObject:@"aaa"];
+    //    [array addObject:@"aaa"];
+    //    [array addObject:@"aaa"];
+    //    [array addObject:@"aaa"];
+    //    [array addObject:@"aaa"];
+    //
+    //    // get paths from root direcory
+    //    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    //    // get documents path
+    //    NSString *documentsPath = [paths objectAtIndex:0];
+    //    // get the path to our Data/plist file
+    //    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Data.plist"];
+    //
+    //    // This writes the array to a plist file. If this file does not already exist, it creates a new one.
+    //    [array writeToFile:plistPath atomically: TRUE];
+    //    
+    //    NSLog(@"%@", plistPath);
     [_uberkit openUberApp];
     
     
     
-    }
+}
 
 @end

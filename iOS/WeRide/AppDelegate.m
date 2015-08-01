@@ -31,19 +31,6 @@
                                     didFinishLaunchingWithOptions:launchOptions];
 }
 
-//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-//    if ([url.scheme isEqualToString:@"weride"]) {
-//        NSArray *queryParams = [[url query] componentsSeparatedByString:@"&"];
-//        NSArray *codeParam = [queryParams filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF BEGINSWITH %@", @"code="]];
-//        NSString *codeQuery = [codeParam objectAtIndex:0];
-//        NSString *code = [codeQuery stringByReplacingOccurrencesOfString:@"code=" withString:@""];
-//        NSLog(@"My code is %@", code);
-//        return YES;
-//    }
-//    
-//    return NO;
-//}
-
 - (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     

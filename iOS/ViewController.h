@@ -12,7 +12,7 @@
 
 @interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UberKitDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *complete;
-@property (weak, nonatomic) IBOutlet UITextField *amount;
+@property (weak, nonatomic) IBOutlet UILabel *amount;
 @property (nonatomic, retain) UberKit *uberkit;
 @property (nonatomic, retain) NSString *receipt;
 @property (nonatomic, retain) NSString *holder;

@@ -11,6 +11,7 @@
 #import "NSData+Base64Additions.h"
 #import <SystemConfiguration/SCNetworkReachability.h>
 #include <netinet/in.h>
+#import "myCell.h"
 
 @interface ViewController ()
 
@@ -41,6 +42,11 @@
     [_amount setEnabled:NO];
     _holder = nil;
     _holder_email = nil;
+    
+    
+    [self.tableView setBackgroundView:nil];
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
+    [self.tableView setOpaque:NO];
     
     [super viewDidLoad];
     

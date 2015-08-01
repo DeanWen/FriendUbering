@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIImage *btnImage = [UIImage imageNamed:@"fb-login-button.png"];
+    UIImage *btnImage = [UIImage imageNamed:@"login_icon"];
     [self.loginButton setImage:nil forState:UIControlStateNormal];
     [self.loginButton setImage:nil forState:UIControlStateHighlighted];
     [self.loginButton setBackgroundImage:btnImage forState:UIControlStateHighlighted];

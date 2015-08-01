@@ -12,9 +12,7 @@
 #import "UberKit.h"
 
 @interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UberKitDelegate>
-//@property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
-//@property (nonatomic, strong) NSArray *arr;
-//@property (nonatomic, strong) NSArray *friends;
+@property (weak, nonatomic) IBOutlet UIButton *uberButton;
 @property (nonatomic, strong) NSMutableArray *ids;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) UberKit *uberkit;
