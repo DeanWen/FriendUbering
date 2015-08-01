@@ -10,7 +10,7 @@
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" opaque="NO" alpha="0.20000000000000001" contentMode="redraw" itemPositioning="fill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" backgroundImage="shortline_new_v4" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -83,39 +83,42 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bcg" translatesAutoresizingMaskIntoConstraints="NO" id="798-Vc-Iaf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TKT-hI-Ehu">
-                                <rect key="frame" x="0.0" y="235" width="375" height="250"/>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TKT-hI-Ehu">
+                                <rect key="frame" x="0.0" y="200" width="375" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.54509806632995605" green="0.66666668653488159" blue="0.92549026012420654" alpha="1" colorSpace="deviceRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="58" id="cKW-bG-wZC" customClass="myCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="69" id="cKW-bG-wZC" customClass="myCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cKW-bG-wZC" id="bBm-Ll-IH7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white_box_shortline-07-07" translatesAutoresizingMaskIntoConstraints="NO" id="5WE-8n-Znd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="316" height="54"/>
+                                                    <rect key="frame" x="1" y="11" width="316" height="54"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gET-N9-6wK">
-                                                    <rect key="frame" x="65" y="8" width="197" height="21"/>
+                                                    <rect key="frame" x="66" y="19" width="197" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6I-5W-cka">
-                                                    <rect key="frame" x="65" y="33" width="197" height="21"/>
+                                                    <rect key="frame" x="66" y="44" width="197" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cute" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-WI-Yh9">
-                                                    <rect key="frame" x="8" y="4" width="50" height="50"/>
+                                                    <rect key="frame" x="9" y="15" width="40" height="30"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J5Z-Lj-Lhi">
+                                                    <rect key="frame" x="0.0" y="7" width="317" height="6"/>
                                                 </imageView>
                                                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-aB-4Dd">
-                                                    <rect key="frame" x="264" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="270" y="23" width="42" height="31"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
@@ -125,6 +128,7 @@
                                         <connections>
                                             <outlet property="email" destination="N6I-5W-cka" id="DTj-rk-xej"/>
                                             <outlet property="name" destination="gET-N9-6wK" id="y4u-N8-irb"/>
+                                            <outlet property="seperator" destination="J5Z-Lj-Lhi" id="8kC-GG-XYM"/>
                                             <outlet property="status" destination="2NW-aB-4Dd" id="r8V-Gd-tdW"/>
                                             <outlet property="thumnail" destination="Ike-WI-Yh9" id="pE2-aX-6jb"/>
                                         </connections>
@@ -135,13 +139,10 @@
                                     <outlet property="delegate" destination="hnM-Ai-y81" id="fe0-lz-rJZ"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="group_icon-07" translatesAutoresizingMaskIntoConstraints="NO" id="cap-46-SC3">
-                                <rect key="frame" x="95" y="20" width="140" height="110"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpj-Nf-UNp">
-                                <rect key="frame" x="125" y="151" width="82" height="68"/>
+                                <rect key="frame" x="100" y="47" width="133" height="123"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Call Uber" image="uber_icon_on_group_screen-07">
+                                <state key="normal" title="Call Uber" image="uber_icon_big-07-07">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -151,7 +152,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="group_no_glow-07" selectedImage="Group_Glowing-01" id="2mP-fD-On1"/>
+                    <tabBarItem key="tabBarItem" title="" image="group_no_glow_new-08" selectedImage="group_glow_new-07" id="2mP-fD-On1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="TKT-hI-Ehu" id="Lyn-0s-qZT"/>
@@ -180,7 +181,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="total-07" translatesAutoresizingMaskIntoConstraints="NO" id="CZt-Vf-4vE">
                                 <rect key="frame" x="81" y="34" width="66" height="21"/>
                             </imageView>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-g9-hPg">
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-g9-hPg">
                                 <rect key="frame" x="0.0" y="187" width="375" height="275"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -190,24 +191,24 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="table_cell" rowHeight="60" id="fOz-pB-kBj" customClass="MyTableViewCell">
+                                    <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="table_cell" rowHeight="64" id="fOz-pB-kBj" customClass="MyTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fOz-pB-kBj" id="QqS-ci-xRZ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white_box_shortline-07-07" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-8n-6ma">
-                                                    <rect key="frame" x="-5" y="0.0" width="325" height="54"/>
+                                                    <rect key="frame" x="-5" y="3" width="325" height="54"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6if-pB-byW">
-                                                    <rect key="frame" x="72" y="3" width="276" height="21"/>
+                                                    <rect key="frame" x="72" y="6" width="276" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZ0-RW-AWv">
-                                                    <rect key="frame" x="274" y="3" width="40" height="40"/>
+                                                    <rect key="frame" x="274" y="6" width="40" height="40"/>
                                                     <state key="normal" image="cross-07">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -216,14 +217,17 @@
                                                     </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cute" translatesAutoresizingMaskIntoConstraints="NO" id="eYH-nP-n0M">
-                                                    <rect key="frame" x="8" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="8" y="3" width="50" height="50"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq8-sc-kAJ">
-                                                    <rect key="frame" x="72" y="22" width="221" height="21"/>
+                                                    <rect key="frame" x="72" y="25" width="221" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ker-EV-QdL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="6"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -233,6 +237,7 @@
                                             <outlet property="email" destination="Uq8-sc-kAJ" id="1aM-0C-SAf"/>
                                             <outlet property="getOffButton" destination="jZ0-RW-AWv" id="Ihb-We-Csf"/>
                                             <outlet property="name" destination="6if-pB-byW" id="BhX-a8-dKZ"/>
+                                            <outlet property="seperator" destination="ker-EV-QdL" id="OlK-r6-JD6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -280,7 +285,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="inride-no-glow-01" selectedImage="inride_no_glow-07" id="vkp-ch-rdw">
+                    <tabBarItem key="tabBarItem" title="" image="inride-no-glow-new-07" selectedImage="inride-new-glow" id="vkp-ch-rdw">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -297,19 +302,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group_Glowing-01" width="307" height="178"/>
         <image name="bcg" width="1250" height="2223"/>
         <image name="cross-07" width="125" height="125"/>
         <image name="cute" width="350" height="500"/>
-        <image name="group_icon-07" width="420" height="295"/>
-        <image name="group_no_glow-07" width="196" height="68"/>
-        <image name="inride-no-glow-01" width="203" height="68"/>
-        <image name="inride_no_glow-07" width="317" height="178"/>
+        <image name="group_glow_new-07" width="185" height="108"/>
+        <image name="group_no_glow_new-08" width="118" height="42"/>
+        <image name="inride-new-glow" width="191" height="108"/>
+        <image name="inride-no-glow-new-07" width="123" height="42"/>
         <image name="red_flag-07" width="125" height="139"/>
         <image name="send-07" width="137" height="100"/>
+        <image name="shortline_new_v4" width="375" height="74"/>
         <image name="stop_watch-07" width="126" height="140"/>
         <image name="total-07" width="180" height="68"/>
-        <image name="uber_icon_on_group_screen-07" width="164" height="164"/>
+        <image name="uber_icon_big-07-07" width="283" height="283"/>
         <image name="white_box_shortline-07-07" width="1140" height="275"/>
     </resources>
 </document>

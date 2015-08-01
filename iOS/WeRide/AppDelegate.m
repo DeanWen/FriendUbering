@@ -22,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UITextField *lagFreeField = [[UITextField alloc] init];
+    [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
     [self.window addSubview:lagFreeField];
     [lagFreeField becomeFirstResponder];
     [lagFreeField resignFirstResponder];

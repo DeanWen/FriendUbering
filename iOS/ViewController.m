@@ -236,6 +236,20 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"table_cell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    if (indexPath.row == 1) {
+        NSLog(@"row 1");
+        [cell.seperator setImage:[UIImage imageNamed:@"color_bar_red-07"]];
+    }else {
+        if (indexPath.row % 2 == 0) {
+            [cell.seperator setImage:[UIImage imageNamed:@"color_bar_green-07"]];
+        }else {
+            if (indexPath.row % 3 == 0) {
+                [cell.seperator setImage:[UIImage imageNamed:@"color_bar_orange-07"]];
+            }else {
+                [cell.seperator setImage:[UIImage imageNamed:@"color_bar_blue-07"]];
+            }
+        }
+    }
     
     cell.name.text = [names objectAtIndex:indexPath.row];
     cell.email.text = [emails objectAtIndex:indexPath.row];

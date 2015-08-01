@@ -128,11 +128,25 @@
     FriendItem *item = _ids[indexPath.row];
     cell.name.text = item.name;
     cell.email.text = item.email;
+    if (indexPath.row == 1) {
+        NSLog(@"row 1");
+        [cell.seperator setImage:[UIImage imageNamed:@"color_bar_red-07"]];
+    }else {
+    if (indexPath.row % 2 == 0) {
+        [cell.seperator setImage:[UIImage imageNamed:@"color_bar_green-07"]];
+    }else {
+        if (indexPath.row % 3 == 0) {
+            [cell.seperator setImage:[UIImage imageNamed:@"color_bar_orange-07"]];
+        }else {
+            [cell.seperator setImage:[UIImage imageNamed:@"color_bar_blue-07"]];
+        }
+    }
+    }
 //    cell.textLabel.text = item.name;
 //    cell.detailTextLabel.text = item.email;
     
     if (item.selected) {
-        [cell.status setImage:[UIImage imageNamed:@"tick-07"]];
+        [cell.status setImage:[UIImage imageNamed:@"tick-new-07"]];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         [cell.status setImage:nil];

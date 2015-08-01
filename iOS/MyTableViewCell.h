@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *email;
 @property (weak, nonatomic) IBOutlet UIButton *getOffButton;
 - (IBAction)getOff:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *seperator;
 @end

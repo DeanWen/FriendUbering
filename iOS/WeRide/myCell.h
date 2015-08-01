@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *status;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *email;
+@property (weak, nonatomic) IBOutlet UIImageView *seperator;
 
 @end
